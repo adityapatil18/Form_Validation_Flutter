@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey();
+
   void _submit() {
     final isValid = _formKey.currentState?.validate();
     if (!isValid!) {
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                     controller: passwordTextEditingController,
                     obscureText: true,
                     decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.email),
+                      prefixIcon: Icon(Icons.visibility_off),
                       hintStyle: TextStyle(color: Colors.black),
                       labelText: 'Enter your password',
                       labelStyle: TextStyle(color: Colors.black),
